@@ -471,6 +471,7 @@
 				</ul>
 			</div>
 		</section>
+
 		<!-- Підвал -->
 
 		<footer class="footer">
@@ -587,35 +588,37 @@
 						<use href="./images/icons.svg#close-button"></use>
 					</svg>
 				</button>
+
+				<!-- Форма -->
+
 				<form>
 					<strong class="form-title">Оставьте свои данные, мы вам перезвоним</strong>
-					<ul>
-						<li>
-							<label for=""><span>Имя</span></label>
-							<input type="text" />
+					<ul class="">
+						<li class="">
+							<label for="name"><span class="">Имя</span></label>
+							<input type="text" name="name" id="name" class="" />
+							<svg class=""><use href=""></use></svg>
+						</li>
+						<li class="">
+							<label for="tel"><span class="">Телефон</span></label>
+							<input type="tel" name="tel" id="tel" class="" />
+							<svg class=""><use href=""></use></svg>
+						</li>
+						<li class="">
+							<label for="mail"><span class="">Почта</span></label>
+							<input type="email" name="email" id="mail" class="" />
 							<svg><use></use></svg>
 						</li>
-						<li>
-							<label><span>Телефон</span></label>
-							<input type="text" />
-							<svg><use></use></svg>
-						</li>
-						<li>
-							<label><span>Почта</span></label>
-							<input type="text" />
-							<svg><use></use></svg>
-						</li>
-						<li>
-							<label><span>Комментарий</span></label>
-							<input type="text" />
-							<textarea name="" id="" cols="30" rows="10">Введите текст</textarea>
+						<li class="">
+							<label for="comment"><span class="">Комментарий</span></label>
+							<textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
 						</li>
 					</ul>
 					<label for="">
-						<input type="checkbox" name="" id="" /><span>Соглашаюсь с рассылкой и принимаю</span
-						><a href="">Условия договора</a>
+						<input type="checkbox" name="" id="" /><span class="">Соглашаюсь с рассылкой и принимаю</span
+						><a class="" href="">Условия договора</a>
 					</label>
-					<button type="submit">Отправить</button>
+					<button type="submit" class="">Отправить</button>
 				</form>
 			</div>
 		</div>
