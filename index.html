@@ -591,34 +591,35 @@
 
 				<!-- Форма -->
 
-				<form>
+				<form class="form-action" autocomplete="on">
 					<strong class="form-title">Оставьте свои данные, мы вам перезвоним</strong>
-					<ul class="">
-						<li class="">
-							<label for="name"><span class="">Имя</span></label>
-							<input type="text" name="name" id="name" class="" />
-							<svg class=""><use href=""></use></svg>
+					<ul class="form-list list">
+						<li class="form-item">
+							<label for="name"><span class="label">Имя</span></label>
+							<input type="text" name="name" id="name" class="input" required autofocus />
+							<svg class="input-icon"><use href="./images/icons.svg#icon-person"></use></svg>
 						</li>
-						<li class="">
-							<label for="tel"><span class="">Телефон</span></label>
-							<input type="tel" name="tel" id="tel" class="" />
-							<svg class=""><use href=""></use></svg>
+						<li class="form-item">
+							<label for="tel"><span class="label">Телефон</span></label>
+							<input type="tel" name="tel" id="tel" class="input" required />
+							<svg class="input-icon"><use href="./images/icons.svg#icon-phone"></use></svg>
 						</li>
-						<li class="">
-							<label for="mail"><span class="">Почта</span></label>
-							<input type="email" name="email" id="mail" class="" />
-							<svg><use></use></svg>
+						<li class="form-item">
+							<label for="mail"><span class="label">Почта</span></label>
+							<input type="email" name="email" id="mail" class="input" required />
+							<svg class="input-icon"><use href="./images/icons.svg#icon-email"></use></svg>
 						</li>
-						<li class="">
-							<label for="comment"><span class="">Комментарий</span></label>
+						<li class="form-item">
+							<label for="comment"><span class="label">Комментарий</span></label>
 							<textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
 						</li>
 					</ul>
-					<label for="">
-						<input type="checkbox" name="" id="" /><span class="">Соглашаюсь с рассылкой и принимаю</span
-						><a class="" href="">Условия договора</a>
+					<label class="label-check">
+						<input type="checkbox" name="agreement" class="checkbox" required /><span class="agree"
+							>Соглашаюсь с рассылкой и принимаю</span
+						><a class="agreement-link link" href="">Условия договора</a>
 					</label>
-					<button type="submit" class="">Отправить</button>
+					<button type="submit" class="submit-button">Отправить</button>
 				</form>
 			</div>
 		</div>
