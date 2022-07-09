@@ -599,17 +599,17 @@ img {
 .footer-input {
     padding-left: 30px;
     background-color: inherit;
-    color: #FFFFFF;
 
     width: 358px;
     height: 50px;
 
+    color: var(--secondary-title-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
 }
 
-.button-submit {
+.footer-button-submit {
     display: inline-flex;
     align-items: center;
     text-align: center;
@@ -639,7 +639,6 @@ img {
     fill: currentColor;
 }
 
-
 /* Модальне вікно */
 
 .backdrop {
@@ -653,10 +652,7 @@ img {
     visibility: visible;
     pointer-events: initial;
 
-    transition-property: opacity, visibility;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition: opacity var(--anim), visibility var(--anim);
 }
 
 .backdrop.is-hidden {
@@ -673,6 +669,7 @@ img {
     width: 528px;
     height: 581px;
     padding: 40px;
+
     background-color: var(--background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -695,18 +692,28 @@ img {
     cursor: pointer;
 }
 
-
 /* Форма */
 
-.form-action {
-    padding: 40px;
+.form-register {
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .form-title {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-top: 0;
 
     font-size: 20px;
@@ -716,33 +723,19 @@ img {
     color: var(--title-text-color);
 }
 
-.form-list {
-    display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        margin-top: 0;
-        padding: 0;
-        width: 100%;
-}
-
-.form-item {
+/* .form-field:not(:last-child) {
+    margin-bottom: 10px;
+} */
+.form-label {
     position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.form-item:not(:last-child) {
-margin-bottom: 10px;
-}
-
-.input {
-height: 40px;
-    margin: 0;
-    padding: 0;
+.form-input {
+    height: 40px;
+    /* margin: 0;
+    padding: 0; */
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 35px;
@@ -750,110 +743,115 @@ height: 40px;
     cursor: pointer;
 }
 
-.input-icon {
+.icon-input {
     position: absolute;
-        top: 50%;
-        left: 12px;
-    
-        width: 18px;
-        height: 18px;
-    
-        transition: fill 250ms var(--timing-function)
-}
-/* змінити fill для іконки з класом form-icon,
-коли сусідній елемент input в стані ховеру/фокусу */
+    top: 50%;
+    left: 12px;
 
-.input:focus+.input-icon {
-    fill: var(--accent-color);
+    /* width: 18px;
+    height: 18px; */
+
+    /* transition: fill 250ms var(--timing-function) */
 }
 
-.input:focus,
-.form-item textarea:focus {
-    outline: none;
-        border: 1px solid var(--accent-color);
-}
-
-.label {
-    margin-bottom: 4px;
-    
-        font-size: 12px;
-        line-height: 1.16;
-        letter-spacing: 0.01em;
-    
-        color: var(--primary-text-color)
-}
-
-.form-item textarea::placeholder {
-    font-size: 12px;
-        line-height: 1.16;
-        letter-spacing: 0.01em;
-    
-        color: rgba(117, 117, 117, 0.5);
-}
-
-textarea {
-    resize: none;
+.textarea {
     height: 120px;
-    padding: 12px 16px;
-
+        /* margin: 0;
+        padding: 0; */
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    padding: 12px 16px;
+        /* padding-left: 35px; */
+    resize: none;
     cursor: pointer;
 }
 
-.checkbox {
+.form-text {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
     
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-} 
-
- .icon-span {
-    display: inline-block;
-    width: 16px;
-    height: 15px;
-
-    margin-right: 7px;
-
-    border: 2px solid var(--title-text-color);
-    border-radius: 4px;
+    color: var(--primary-text-color)
 }
 
-.checkbox:checked+.icon-span {
-    background-color: var(--accent-color);
-    background-image: url('../images/form/icon-check.svg');
-    background-size: contain;
-    background-origin: border-box;
-    border-color: var(--accent-color);
-    background-repeat: no-repeat;
+.form-input:focus + .icon-input {
+    fill: var(--accent-color);
 }
 
- .label-check {
+.form-input:focus,
+.form-label textarea:focus {
+    outline: none;
+    border: 1px solid var(--accent-color);
+    
+}
+
+
+/* .form-label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: var(--primary-text-color)
+} */
+
+.form-label textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-checkbox {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 7px;
     margin-bottom: 30px;
+}
 
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--title-text-color)1;
+    border-radius: 2px;
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+
+    transition: background-color var(--anim), border-color var(--anim);
+
+}
+
+.form-checkbox-input:checked+.custom-checkbox {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.checkbox-icon {
+    fill: #ffffff;
+}
+
+.checkbox-agreement {
+    font-weight: 400;
+    font-size: 14px;
     line-height: 1.71;
+
     color: var(--primary-text-color);
+    user-select: none;
 }
 
-.agreement-link {
-    display: inline;
+
+.agreement-text {
     color: var(--accent-color);
-    margin-left: 3px;
 }
 
-.submit-button {
-
-        display: inline-block;
+.button-submit {
+    display: inline-block;
         border: none;
         border-radius: 4px;
         padding: 10px 55px;
@@ -871,8 +869,8 @@ textarea {
         align-items: center;
         text-align: center;
         letter-spacing: 0.06em;
-             
-} 
+}
+
 
 /* Секція Портфоліо */
 

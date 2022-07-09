@@ -568,7 +568,7 @@
 					<div class="subscribe">
 						<input type="email" name="email" id="email" placeholder="E-mail" required class="footer-input" />
 
-						<button type="submit" class="button-submit">
+						<button type="submit" class="footer-button-submit">
 							Подписаться
 							<svg class="icon-send" width="24px" height="24px">
 								<use href="./images/icons.svg#icon-send"></use>
@@ -591,34 +591,50 @@
 
 				<!-- Форма -->
 
-				<form class="form-action" autocomplete="on">
+				<form class="form-register">
 					<strong class="form-title">Оставьте свои данные, мы вам перезвоним</strong>
-					<ul class="form-list list">
-						<li class="form-item">
-							<label for="name"><span class="label">Имя</span></label>
-							<input type="text" name="name" id="name" class="input" required autofocus />
-							<svg class="input-icon"><use href="./images/icons.svg#icon-person"></use></svg>
-						</li>
-						<li class="form-item">
-							<label for="tel"><span class="label">Телефон</span></label>
-							<input type="tel" name="tel" id="tel" class="input" required />
-							<svg class="input-icon"><use href="./images/icons.svg#icon-phone"></use></svg>
-						</li>
-						<li class="form-item">
-							<label for="mail"><span class="label">Почта</span></label>
-							<input type="email" name="email" id="mail" class="input" required />
-							<svg class="input-icon"><use href="./images/icons.svg#icon-email"></use></svg>
-						</li>
-						<li class="form-item">
-							<label for="comment"><span class="label">Комментарий</span></label>
-							<textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
-						</li>
-					</ul>
-					<label class="label-check">
-						<input type="checkbox" name="agreement" class="checkbox" required /><span class="check-icon"></span
-						>Соглашаюсь с рассылкой и принимаю<a class="agreement-link" href="">Условия договора</a>
+					<div class="form-box">
+						<label class="form-label">
+							<span class="form-text">Имя</span>
+							<input type="text" class="form-input" />
+							<svg class="icon-input" width="18" height="18">
+								<use href="./images/icons.svg#icon-person"></use>
+							</svg>
+						</label>
+
+						<label class="form-label">
+							<span class="form-text">Телефон</span>
+							<input type="text" class="form-input" />
+							<svg class="icon-input" width="18" height="18">
+								<use href="./images/icons.svg#icon-phone"></use>
+							</svg>
+						</label>
+
+						<label class="form-label">
+							<span class="form-text">Почта</span>
+							<input type="text" class="form-input" />
+							<svg class="icon-input" width="18" height="18">
+								<use href="./images/icons.svg#icon-email"></use>
+							</svg>
+						</label>
+
+						<label class="form-label">
+							<span class="form-text">Комментарий</span>
+							<textarea name="" class="textarea" placeholder="Введите текст"></textarea>
+						</label>
+					</div>
+
+					<label class="form-checkbox">
+						<input class="visually-hidden form-checkbox-input" type="checkbox" name="agreement" checked />
+						<div class="custom-checkbox">
+							<svg class="checkbox-icon" width="11" height="18">
+								<use href="./images/icons.svg#icon-check"></use>
+							</svg>
+						</div>
+						<span class="checkbox-agreement">Соглашаюсь с рассылкой и принимаю</span
+						><a class="agreement-text" href="">Условия договора</a>
 					</label>
-					<button type="submit" class="submit-button">Отправить</button>
+					<button type="submit" class="button-submit">Отправить</button>
 				</form>
 			</div>
 		</div>
