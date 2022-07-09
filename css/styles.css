@@ -12,7 +12,7 @@
 
     /* Акцентні кольори */
     --accent-color: #2196f3;
-    --accent-color-focus: #188ce8;
+    /* --accent-color-focus: #188ce8; */
 
     /* Інше */
 
@@ -279,6 +279,7 @@ img {
     font-family: inherit;
     color: var(--secondary-title-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
@@ -286,17 +287,7 @@ img {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-
-    transition-property: color, background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.hero-button:hover,
-.hero-button:focus {
-    background-color: var(--accent-color-focus);
-}
-
 
 
 /* Секція Переваги */
@@ -570,7 +561,7 @@ img {
     height: 44px;
 
     background-color: rgba(255, 255, 255, 0.1);
-    color: #FFFFFF;
+    color: var(--secondary-title-color);
     border-radius: 50%;
 
     transition-property: background-color;
@@ -608,11 +599,11 @@ img {
 .footer-input {
     padding-left: 30px;
     background-color: inherit;
+    color: #FFFFFF;
 
     width: 358px;
     height: 50px;
 
-    /* color: #FFFFFF; */
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -681,6 +672,7 @@ img {
     transform: translate(-50%, -50%);
     width: 528px;
     height: 581px;
+    padding: 40px;
     background-color: var(--background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -768,6 +760,8 @@ height: 40px;
     
         transition: fill 250ms var(--timing-function)
 }
+/* змінити fill для іконки з класом form-icon,
+коли сусідній елемент input в стані ховеру/фокусу */
 
 .input:focus+.input-icon {
     fill: var(--accent-color);
@@ -820,9 +814,9 @@ textarea {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-}
+} 
 
-/* .icon-span {
+ .icon-span {
     display: inline-block;
     width: 16px;
     height: 15px;
@@ -831,18 +825,18 @@ textarea {
 
     border: 2px solid var(--title-text-color);
     border-radius: 4px;
-} */
+}
 
-/* .checkbox:checked+.icon-span {
+.checkbox:checked+.icon-span {
     background-color: var(--accent-color);
     background-image: url('../images/form/icon-check.svg');
     background-size: contain;
     background-origin: border-box;
     border-color: var(--accent-color);
     background-repeat: no-repeat;
-} */
+}
 
-.label-check {
+ .label-check {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
@@ -858,10 +852,27 @@ textarea {
 }
 
 .submit-button {
-    padding: 10px 55px;
 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+        display: inline-block;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 55px;
+        margin: 0 auto;
+        min-width: 200px;
+    
+        font-family: inherit;
+        color: var(--secondary-title-color);
+        background-color: var(--accent-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+             
+} 
 
 /* Секція Портфоліо */
 
