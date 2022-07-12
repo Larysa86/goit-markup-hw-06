@@ -726,6 +726,10 @@ img {
     padding: 40px;
 }
 
+.form-box {
+    margin-bottom: 20px;
+}
+
 .form-title {
     margin-bottom: 15px;
     margin-top: 0;
@@ -737,16 +741,10 @@ img {
     color: var(--title-text-color);
 }
 
-
 .form-label {
     position: relative;
     display: block;
     margin-bottom: 10px;
-}
-
-
-.form-label:last-child {
-    margin-bottom: 20px;
 }
 
 .form-text {
