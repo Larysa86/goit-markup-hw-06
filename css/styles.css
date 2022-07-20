@@ -97,11 +97,12 @@ img {
 .card-set {
     display: flex;
     flex-wrap: wrap;
-    margin: calc(-1 * var(--indent) / 2);
+    margin: calc(-1 * var(--indent) / 2); 
+   
 }
 
 .card-set-item {
-    margin: calc(var(--indent) / 2);
+    margin: calc(var(--indent) / 2); 
     flex-basis: calc((100% - (var(--indent))*var(--items)) / var(--items));
 }
 
